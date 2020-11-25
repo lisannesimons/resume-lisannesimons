@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en">
@@ -208,7 +206,7 @@
 
                 <div class="testimonials__slide">
 		    <a href="https://www.linkedin.com/in/luc-kusters-334414147/">
-                    	<img src="images/avatars/luckusters.jpg" alt="Author image" class="testimonials__avatar">
+                    	<img src="images/avatars/luckusters.jpeg" alt="Author image" class="testimonials__avatar">
                     </a>
 		   <p>"It was a pleasure working with Lisanne during our shared time in the board of student association K.A.V. Alcuinus.
 		    She is hard-working, organized and communicative, which, to me, has shown that she is a great and responsible leader who operates well even in stressful situations."</p>

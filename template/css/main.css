@@ -2805,14 +2805,14 @@ html.no-csstransitions .home-content__main {
     width: 1px;
     height: 3rem;
     position: absolute;
-    left: calc(3.3rem + .9rem);
+    left: calc(4rem + .9rem);
     top: 0;
     background-color: rgba(36, 46, 46, .3);
 }
 
 .testimonials__avatar {
-    width: 6.6rem;
-    height: 6.6rem;
+    width: 8rem;
+    height: 8rem;
     box-shadow: 0 0 0 0.9rem rgba(36, 46, 46, 0.3);
     border-radius: 100%;
     position: absolute;
@@ -2852,8 +2852,8 @@ html.no-csstransitions .home-content__main {
         padding-left: 11rem;
     }
     .testimonials__avatar {
-        width: 6rem;
-        height: 6rem;
+        width: 7rem;
+        height: 7rem;
     }
 }
 
