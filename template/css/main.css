@@ -1765,7 +1765,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 }
 
-.s-home .overlay {
+@media only screen and (min-width: 1001px) {
+    .s-home .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -1773,15 +1774,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     height: 100%;
     opacity: .75;
     background-color: #ffffff;
-}
-
-@media only screen and (max-width: 800px) {
-	.s-home .overlay {
-	    width: 100%;
-	    height: 175px;
-	    margin-top: 520px;
-	    opacity: .9;
-	}
+    } 
 }
 
 .no-js .s-home {
@@ -1808,7 +1801,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     -webkit-background-size: cover !important;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     #home {
         background: url('../images/image-bg-mobile.jpg') no-repeat top center;
     }
@@ -2123,18 +2116,42 @@ html.no-csstransitions .home-content__main {
     }
 }
 
+@media only screen and (max-width:1300px) {
+	.home-social span {
+		color: rgb(0,0,0,0)
+	}
+}
+
 @media only screen and (max-width: 1200px) {
     .home-content h1 {
-        font-size: 3.8rem;
+        font-size: 3.5rem;
     }
     .home-content br {
         display: none;
     }
     .home-content__main {
-        max-width: 800px;
+        max-width: 900px;
     }
     .home-content__buttons {
         right: 30px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .home-content h1 {
+        font-size: 3rem;
+    }
+    .home-content__main {
+        padding-right: 40px;
+        max-width: 800px;
+    }
+    .home-content__buttons {
+        position: static;
+        text-align: left;
+    }
+    .home-content__buttons .btn {
+        display: inline-block;
+        margin-right: .9rem;
     }
 }
 
@@ -2153,6 +2170,21 @@ html.no-csstransitions .home-content__main {
     .home-content__buttons .btn {
         display: inline-block;
         margin-right: .9rem;
+    }
+    .home-social{
+	    display: none;
+    }
+    .overlay_horizontal {
+	    width: 100%;
+	    height: 20%;
+	    bottom: 40px;
+	    opacity.9;
+	    position: absolute;
+	    z-index: 0;
+	    background-color: white;
+    }
+    .cta__action {
+	    display: none;
     }
 }
 
