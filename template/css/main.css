@@ -1468,7 +1468,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     z-index: 500;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .s-header {
         background-color: rgb(255, 255, 255, .9);
     }
@@ -1656,7 +1656,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-top: 20px;
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1001px) {
 	.home_buttons {
 		display: none !important; 
 	} 
@@ -1687,7 +1687,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * header
  * ------------------------------------------------------------------- */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .header-logo {
         left: 15px;
     }
@@ -1730,7 +1730,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * make sure the menu is visible on larger screens
  * ------------------------------------------------------------------- */
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1001px) {
     .header-nav-wrap {
         display: block !important;
     }
