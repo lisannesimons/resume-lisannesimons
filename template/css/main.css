@@ -2156,35 +2156,36 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 1000px) {
+    .s-home {
+	    min-height: initial;
+    }
     .home-content {
 	    padding-bottom: 5rem;
     }
     .home-content h1 {
         font-size: 3.6rem;
+	left: 2rem;
     }
     .home-content h3 {
-	    margin-top: 2rem;
+	font-size: 1.6rem;
+	    margin-top: 0;
+    }
+    .home-content__scroll a {
+   	font-size: 1.6rem; 
     }
     .home-content__main {
         padding-right: 40px;
-        max-width: 680px;
 	height: 100%;
-	top: 0; 
-    }
-    .home-content__buttons {
-        position: static;
-        text-align: left;
-    }
-    .home-content__buttons .btn {
-        display: inline-block;
-        margin-right: .9rem;
+	top: 0;
+	left: 2rem;
+	max-width: none;
     }
     .home-social{
 	    display: none;
     }
     .home-content__scroll {
-	    bottom: 1rem;
-	    left: 1rem;
+	    bottom: 0;
+	    left: 0;
     }
     .overlay_horizontal {
 	    width: 100%;
@@ -2198,19 +2199,17 @@ html.no-csstransitions .home-content__main {
     .cta__action {
 	    display: none;
     }
+    .wrapper_parent {
+	    height: 75%;
+	    position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+    } 
 }
 
 @media only screen and (max-width: 800px) {
-    .home-content h3 {
-        font-size: 2rem;
-        padding-left: 50px;
-        margin-left: -10px;
-    }
-    .home-content h3::before {
-        width: 40px;
-    }
     .home-content h1 {
-        font-size: 4rem;
+        font-size: 3.3rem;
     }
 }
 
@@ -2218,39 +2217,59 @@ html.no-csstransitions .home-content__main {
     .home-content h1 {
         font-size: 3rem;
     }
-    .home-social {
-        padding-bottom: 10.8rem;
-    }
-    .home-social::after {
-        height: 10.2rem;
+    .home-content__scroll {
+	    left: 2.5rem;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .s-home {
-        min-height: 654px;
-    }
-    .home-content h3 {
-        font-size: 1.5rem;
-    }
     .home-content h1 {
         font-size: 2.6rem;
     }
 }
 
+@media only screen and (max-width: 450px) {
+    .home-content h1 {
+        font-size: 3rem;
+    }
+}
+
 @media only screen and (max-width: 400px) {
     .home-content h1 {
-        font-size: 2.3rem;
+        font-size: 2.8rem;
     }
-    .home-content__buttons .btn {
-        width: 100%;
-    }
-    .home-social {
-        display: none;
+}
+
+@media only screen and (max-width: 350px) {
+    .home-content h1 {
+        font-size: 2.4rem;
     }
 }
 
 
+@media only screen and (max-width: 300px) {
+    .home-content h1 {
+	    font-size: 1.8rem;
+    }
+    .home-content h3 {
+	    font-size: 1.3rem;
+    }
+    .home-content__scroll a {
+	    font-size: 1.3rem;
+    } 
+}
+
+@media only screen and (max-width: 250px) {
+    .home-content h1 {
+	    font-size: 1.5rem;
+    }
+    .home-content h3 {
+	    font-size: .8rem;
+    }
+    .home-content__scroll a {
+	    font-size: .8rem;
+    } 
+}
 
 /* ===================================================================
  * # about - (_site-layout.scss)
