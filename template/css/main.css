@@ -3206,6 +3206,10 @@ html.no-csstransitions .home-content__main {
     font-size: 1.5rem;
 }
 
+.contact__infos img {
+    border-radius: 50%;
+}
+
 .contact__form {
     padding-right: 40px;
 }
