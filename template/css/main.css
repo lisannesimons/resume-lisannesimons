@@ -4237,7 +4237,6 @@ article.blog-single .blog-content {
     padding: 7.8rem 2rem 6.6rem;
     position: relative;
     overflow: hidden;
-    white-space: nowrap;
 }
 
 .language {
@@ -4268,21 +4267,4 @@ article.blog-single .blog-content {
 	border: 1px solid #5b595b;
 	background-color: #5b595b;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
