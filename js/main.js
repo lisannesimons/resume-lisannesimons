@@ -64,9 +64,9 @@
             triggerHeight = hero.outerHeight() - 170;
 
 
-        $WIN.on('scroll', function () {
+        $('body').on('scroll', function () {
 
-            var loc = $WIN.scrollTop();
+            var loc = $('body').scrollTop();
 
             if (loc > triggerHeight) {
                 hdr.addClass('sticky');
@@ -113,7 +113,7 @@
 
         if (toggleButton.is(':visible')) nav.addClass('mobile');
 
-        $WIN.on('resize', function() {
+        $('body').on('resize', function() {
             if (toggleButton.is(':visible')) nav.addClass('mobile');
             else nav.removeClass('mobile');
         });
@@ -265,9 +265,9 @@
             triggerHeight = hero.outerHeight() - 170;
 
 
-        $WIN.on('scroll', function () {
+        $('body').on('scroll', function () {
 
-            var loc = $WIN.scrollTop();
+            var loc = $('body').scrollTop();
             
             if (loc > triggerHeight) {
                 navigation_links.removeClass('home_buttons');
@@ -428,8 +428,8 @@
         goTopButton = $(".go-top")
 
         // Show or hide the sticky footer button
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() >= pxShow) {
+        $('body').on('scroll', function() {
+            if ($('body').scrollTop() >= pxShow) {
                 goTopButton.fadeIn(fadeInTime);
             } else {
                 goTopButton.fadeOut(fadeOutTime);
