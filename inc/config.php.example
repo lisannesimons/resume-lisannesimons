@@ -1,0 +1,9 @@
+<?php
+
+$siteOwnersEmail = "";
+$smtpServer = "";
+$smtpPort = "";
+$smtpEmail = "";
+$smtpPassword = "";
+
+?>
