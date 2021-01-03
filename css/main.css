@@ -1718,9 +1718,11 @@ html.no-csstransitions .home-content__main {
  * # testimonials - (_site-layout.scss)
  * =================================================================== */
 
+/* original photo by Annie Spratt on Unsplash */
+
 .s-testimonials {
     background-color: #0D0A0B;
-    background-image: url("../images/testimonial-bg.jpg");
+    background-image: url("../images/testimonial-bg-1920.webp");
     background-repeat: no-repeat;
     background-position: center, center;
     padding-top: 9.6rem;
@@ -1729,6 +1731,20 @@ html.no-csstransitions .home-content__main {
     position: relative;
     background-size: cover; 
 }
+
+.no-webp .s-testimonials {
+    background-image: url("../images/testimonial-bg-1920.jpg");
+}
+
+@media only screen and (max-width: 1000px) {
+    .s-testimonials {
+        background-image: url("../images/testimonial-bg-mobile.webp");
+    }
+    .no-webp .s-testimonials {
+        background-image: url("../images/testimonial-bg-mobile.jpg");
+    }
+}
+
 
 .s-testimonials .overlay {
     position: absolute;
