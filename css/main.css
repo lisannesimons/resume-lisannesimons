@@ -1098,6 +1098,18 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background: url('../images/background_1920.jpg') no-repeat top center;
 }
 
+@media 
+((-webkit-min-device-pixel-ratio: 1.5) or 
+(min-resolution: 144dpi)) and
+(min-width: 1000px) { 
+    #home {
+       background: url(../images/background_3840.webp) no-repeat top center;
+    }
+    .no-webp #home {
+       background: url(../images/background_3840.jpg) no-repeat top center;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     #home {
         background: url('../images/background_mobile.webp') no-repeat top center;
