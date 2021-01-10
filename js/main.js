@@ -8,7 +8,7 @@
     "use strict";
 
     var cfg = {
-        scrollDuration : 1200, // smoothscroll duration
+        scrollDuration : 1200 // smoothscroll duration
     };
 
     // Add the User Agent to the <html>
@@ -41,15 +41,6 @@
         });
     };
 
-
-    /* pretty print
-     * -------------------------------------------------- */
-    var ssPrettyPrint = function() {
-        $('pre').addClass('prettyprint');
-        $( document ).ready(function() {
-            prettyPrint();
-        });
-    };
 
 
     /* Move header
@@ -84,13 +75,6 @@
             }
 
         });
-
-        // $WIN.on('resize', function() {
-        //     if ($WIN.width() <= 768) {
-        //             hdr.removeClass('sticky offset scrolling');
-        //     }
-        // });
-
     };
 
 
@@ -123,21 +107,6 @@
             }
         });
 
-    };
-
-
-    /* Masonry
-     * ---------------------------------------------------- */ 
-    var ssMasonryFolio = function () {
-
-        var containerBricks = $('.masonry');
-
-        containerBricks.imagesLoaded(function () {
-            containerBricks.masonry({
-                itemSelector: '.masonry__brick',
-                resize: true
-            });
-        });
     };
 
 
@@ -263,7 +232,6 @@
 
 
         $(window).on('scroll', function () {
-
             var loc = $(window).scrollTop();
             
             if (loc > triggerHeight) {
@@ -273,52 +241,8 @@
             }
 
         });
-
-        // $WIN.on('resize', function() {
-        //     if ($WIN.width() <= 768) {
-        //             hdr.removeClass('sticky offset scrolling');
-        //     }
-        // });
-
     };
 
-
-   /* Stat Counter
-    * ------------------------------------------------------ */
-    var ssStatCount = function() {
-
-        var statSection = $(".s-stats"),
-        stats = $(".stats__count");
-
-        statSection.waypoint({
-
-            handler: function(direction) {
-
-                if (direction === "down") {
-
-                    stats.each(function () {
-                        var $this = $(this);
-
-                        $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                            duration: 4000,
-                            easing: 'swing',
-                            step: function (curValue) {
-                                $this.text(Math.ceil(curValue));
-                            }
-                        });
-                    });
-
-                } 
-
-                // trigger once only
-                this.destroy();
-
-            },
-
-            offset: "90%"
-
-        });
-    };
 
 
    /* Smooth Scrolling
@@ -335,17 +259,11 @@
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top
             }, cfg.scrollDuration, 'swing', function () {
-                window.location.hash = target;
+                window.location.href = target;
             });
 
         });
-    };
 
-
-    /* Placeholder Plugin Settings
-     * ------------------------------------------------------ */
-    var ssPlaceholder = function() {
-        $('input, textarea, select').placeholder();  
     };
 
 
@@ -440,17 +358,12 @@
     (function ssInit() {
 
         ssPreloader();
-        ssPrettyPrint();
         ssMoveHeader();
         ssMobileMenu();
-        ssMasonryFolio();
-        ssPhotoswipe();
         ssSlickSlider();
         ssWaypoints();
         ssHomeButtons();
-        ssStatCount();
         ssSmoothScroll();
-        ssPlaceholder();
         ssAlertBoxes();
         ssContactForm();
         ssBackToTop();
