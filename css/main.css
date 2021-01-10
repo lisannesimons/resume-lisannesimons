@@ -22,7 +22,6 @@ html {
 
 html, body {
     height: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -1507,13 +1506,13 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 450px) {
     .home-content h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .home-content h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 }
 

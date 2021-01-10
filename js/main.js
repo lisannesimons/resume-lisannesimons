@@ -8,11 +8,8 @@
     "use strict";
 
     var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : ''   // mailchimp url
-    },
-
-    $WIN = $(window);
+        scrollDuration : 1200, // smoothscroll duration
+    };
 
     // Add the User Agent to the <html>
     // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
@@ -26,7 +23,7 @@
 
         $("html").addClass('ss-preload');
 
-        $WIN.on('load', function() {
+        $(window).on('load', function() {
 
             // force page scroll position to top at page refresh
             // $('html, body').animate({ scrollTop: 0 }, 'normal');
@@ -64,9 +61,9 @@
             triggerHeight = hero.outerHeight() - 170;
 
 
-        $('body').on('scroll', function () {
+        $(window).on('scroll', function () {
 
-            var loc = $('body').scrollTop();
+            var loc = $(window).scrollTop();
 
             if (loc > triggerHeight) {
                 hdr.addClass('sticky');
@@ -113,7 +110,7 @@
 
         if (toggleButton.is(':visible')) nav.addClass('mobile');
 
-        $('body').on('resize', function() {
+        $(window).on('resize', function() {
             if (toggleButton.is(':visible')) nav.addClass('mobile');
             else nav.removeClass('mobile');
         });
@@ -265,9 +262,9 @@
             triggerHeight = hero.outerHeight() - 170;
 
 
-        $('body').on('scroll', function () {
+        $(window).on('scroll', function () {
 
-            var loc = $('body').scrollTop();
+            var loc = $(window).scrollTop();
             
             if (loc > triggerHeight) {
                 navigation_links.removeClass('home_buttons');
@@ -428,8 +425,8 @@
         goTopButton = $(".go-top")
 
         // Show or hide the sticky footer button
-        $('body').on('scroll', function() {
-            if ($('body').scrollTop() >= pxShow) {
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() >= pxShow) {
                 goTopButton.fadeIn(fadeInTime);
             } else {
                 goTopButton.fadeOut(fadeOutTime);
