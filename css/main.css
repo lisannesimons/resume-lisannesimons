@@ -2015,7 +2015,7 @@ html.no-csstransitions .home-content__main {
  * =================================================================== */
 
 .s-stats {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -2032,15 +2032,32 @@ html.no-csstransitions .home-content__main {
  * =================================================================== */
  
 .col_lang {
-    padding: 7.8rem 2rem 6.6rem;
     position: relative;
     overflow: hidden;
+}
+
+.wrapper{
+	background-color: #cabcb9;
+	vertical-align: middle;
+	display: table-cell;
+	text-align:center;
+	width: 16.66667%;
+	height: 60pt;
+	border-radius: 15px;
+}
+
+.skill {
+    color: #0D0A0B;
+    font-size:14pt;
+    font-weight: bold; 
+    font-family: sans-serif;
 }
 
 .language {
     color: #0D0A0B;
     font-size:18pt;
     font-weight: bold; 
+    font-family: sans-serif;
 }
 
 .language_prof {
