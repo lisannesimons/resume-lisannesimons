@@ -1528,7 +1528,19 @@ html.no-csstransitions .home-content__main {
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
+    .home-content h1 {
+        font-size: 2.4rem;
+    }
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+    .home-content__scroll a {
+	font-size: 1.3rem;
+    } 
+}
+
+@media only screen and (max-width: 341px) {
     .home-content h1 {
         font-size: 2.0rem;
     }
@@ -2041,9 +2053,10 @@ html.no-csstransitions .home-content__main {
 	vertical-align: middle;
 	display: table-cell;
 	text-align:center;
-	width: 16.66667%;
+	width: 14%;
 	height: 60pt;
 	border-radius: 15px;
+    font-size: 12pt;
 }
 
 .skill {
@@ -2081,6 +2094,20 @@ html.no-csstransitions .home-content__main {
     display: inline-block; 
     border: 1px solid #5b595b;
     background-color: #5b595b;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+    .wrapper{
+        font-size: 10pt;
+    }
+
+    .skill-bars li strong {
+        font-size: 1.1rem;
+    }
+
+    .language {
+        font-size:15pt;
+    }
 }
 
 
