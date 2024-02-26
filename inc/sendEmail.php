@@ -6,8 +6,16 @@ if($_POST) {
 
     $name = trim(stripslashes($_POST['contactName']));
     $email = trim(stripslashes($_POST['contactEmail']));
+    $website = trim(stripslashes($_POST['contactWebsite']));
     $subject = trim(stripslashes($_POST['contactSubject']));
     $contact_message = trim(stripslashes($_POST['contactMessage']));
+
+    // *Very* simple spam protection
+    // Add message in case a browser fills it out. Smart spambots will anyway
+    // not fall for this simple protection.
+    if(!empty($website)) {
+        $error['spam'] = "Something went wrong, do *not* fill out the website-field.";
+    };
 
     // Check Name
     if (strlen($name) < 2) {
@@ -58,10 +66,10 @@ if($_POST) {
     } # end if - no validation error
 
     else {
-
         $response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
         $response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
         $response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
+        $response .= (isset($error['spam'])) ? $error['spam'] . "<br />" : null;
         
         echo $response;
 
