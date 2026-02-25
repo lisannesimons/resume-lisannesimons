@@ -1,0 +1,40 @@
+name: Deploy via SFTP
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup SSH Key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+        ssh-keyscan -H ${{ secrets.SFTP_SERVER }} >> ~/.ssh/known_hosts
+      
+    - name: Create clean deployment package
+      run: |
+        mkdir -p /tmp/deploy
+        git archive HEAD | tar -x -C /tmp/deploy
+      
+    - name: Install lftp
+      run: sudo apt-get install -y lftp
+      
+    - name: Deploy with lftp
+      run: |
+        lftp -c "
+          set sftp:connect-program 'ssh -i ~/.ssh/deploy_key';
+          open -u ${{ secrets.SFTP_USERNAME }}, sftp://${{ secrets.SFTP_SERVER }};
+          mirror --reverse --delete --verbose \
+            --exclude .git/ \
+            --exclude .github/ \
+            --exclude inc/config.php \
+            /tmp/deploy/ public_html/;
+        "
